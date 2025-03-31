@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native'
-import { Tabs } from 'expo-router'
+import { Redirect, Tabs } from 'expo-router'
 import { HomeIcon, SearchIcon, SaveIcon, ProfileIcon } from '@/components/icons'
+import { useAuth } from '@/app/providers/AuthProvider';
 
 const TabIcon = ({ focused, title, icon }: { focused: boolean; title: string; icon: React.ReactNode }) => {
     return (
@@ -10,6 +11,8 @@ const TabIcon = ({ focused, title, icon }: { focused: boolean; title: string; ic
             </View>
             <Text
                 className={`text-xs ${focused ? 'text-blue-500 font-semibold' : 'text-slate-500'}`}
+
+
                 numberOfLines={1}
                 ellipsizeMode="tail"
                 style={{ maxWidth: 80 }}
@@ -21,6 +24,11 @@ const TabIcon = ({ focused, title, icon }: { focused: boolean; title: string; ic
 }
 
 const _layout = () => {
+    const { session } = useAuth(); // Get auth state
+
+    if (!session) {
+        return <Redirect href="/(auth)/welcome" />; // Block unauthorized access
+    }
     return (
         <Tabs screenOptions={{
             tabBarActiveTintColor: '#3B82F6',

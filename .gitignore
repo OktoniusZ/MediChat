@@ -18,6 +18,7 @@ expo-env.d.ts
 *.mobileprovision
 
 git-workflow.sh
+google-services.json
 
 # Metro
 .metro-health-check*
