@@ -33,7 +33,7 @@ export default function SignUpScreen() {
                 Alert.alert(
                     'Confirm Your Email',
                     'Check your email for the confirmation link before signing in',
-                    [{ text: 'OK', onPress: () => router.replace('/(auth)/login') }]
+                    [{ text: 'OK', onPress: () => router.replace('/(auth)/signin') }]
                 );
             }
         } finally {
@@ -73,7 +73,7 @@ export default function SignUpScreen() {
                     </Text>
                 </TouchableOpacity>
 
-                <Link href="/(auth)/login" className="mt-4 text-center text-gray-500">
+                <Link href="/(auth)/signin" className="mt-4 text-center text-gray-500">
                     Already have an account? Sign In
                 </Link>
             </View>

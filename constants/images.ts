@@ -1,17 +1,15 @@
-import bg from "@/assets/images/bg.png";
-import highlight from "@/assets/images/highlight.png";
-import rankingGradient from "@/assets/images/rankingGradient.png";
 import anime1 from "@/assets/images/anime1.jpg"
-import anime2 from "@/assets/images/anime2.jpg"
-import anime3 from "@/assets/images/anime3.jpg"
-import anime4 from "@/assets/images/anime4.jpg"
+import doctor1 from "@/assets/images/doctor1.jpg"
+import doctor2 from "@/assets/images/doctor2.jpg"
+import doctor3 from "@/assets/images/doctor3.jpg"
+import covid from "@/assets/images/covid.jpg"
+import news from "@/assets/images/news.jpg"
 
 export const images = {
-  bg,
-  highlight,
-  rankingGradient,
   anime1,
-  anime2,
-  anime3,
-  anime4,
+  doctor1,
+  doctor2,
+  doctor3,
+  covid,
+  news,
 };
