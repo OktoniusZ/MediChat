@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import { Redirect, Tabs } from 'expo-router'
-import { HomeIcon, SearchIcon, SaveIcon, ProfileIcon } from '@/components/icons'
+import { HomeIcon, SearchIcon, SaveIcon, ProfileIcon, MessageIcon } from '@/components/icons'
 import { useAuth } from '@/app/providers/AuthProvider';
 
 const TabIcon = ({ focused, title, icon }: { focused: boolean; title: string; icon: React.ReactNode }) => {
@@ -26,7 +26,7 @@ const TabIcon = ({ focused, title, icon }: { focused: boolean; title: string; ic
 const _layout = () => {
     const { session } = useAuth(); // Get auth state
 
-    // ACTIVATE THIS IF PRODUCTION IS READY
+    // ACTIVATE THIS IF PRODUCTION IS
     // if (!session) {
     //     return <Redirect href="/(auth)/welcome" />; // Block unauthorized access
     // }
@@ -67,27 +67,27 @@ const _layout = () => {
             />
 
             <Tabs.Screen
-                name="search"
+                name="messages"
                 options={{
                     title: "",
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             focused={focused}
-                            title="Search"
-                            icon={<SearchIcon active={focused} />}
+                            title="Messages"
+                            icon={<MessageIcon active={focused} />}
                         />
                     ),
                 }}
             />
 
             <Tabs.Screen
-                name="save"
+                name="hospitals"
                 options={{
                     title: "",
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             focused={focused}
-                            title="Saved"
+                            title="Hospital"
                             icon={<SaveIcon active={focused} />}
                         />
                     ),
