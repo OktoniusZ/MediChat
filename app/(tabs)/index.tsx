@@ -22,7 +22,7 @@ export default function HomeScreen() {
 
     const newsItems = [
         { title: 'New COVID-19 Vaccine Available', time: 'Today', image: images.covid },
-        { title: 'Tips for Better Sleep Hygiene', time: 'Yesterday', image: images.news },
+        { title: 'Tips foyr Better Sleep Hygiene', time: 'Yesterday', image: images.news },
     ];
 
     return (

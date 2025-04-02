@@ -36,3 +36,17 @@ export type RootStackParamList = {
     Hospitals: undefined;
     HospitalDetails: { hospital: Hospital };
 };
+
+export interface UserProfile {
+    id: string;
+    name: string;
+    email: string;
+    phone?: string;
+    avatar?: string;
+    joinedDate: string;
+    medicalHistory?: {
+        bloodType?: string;
+        allergies?: string[];
+        conditions?: string[];
+    };
+}
