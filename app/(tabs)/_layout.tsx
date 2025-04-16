@@ -24,12 +24,11 @@ const TabIcon = ({ focused, title, icon }: { focused: boolean; title: string; ic
 }
 
 const _layout = () => {
-    const { session } = useAuth(); // Get auth state
+    const { session } = useAuth();
 
-    // ACTIVATE THIS IF PRODUCTION IS
-    // if (!session) {
-    //     return <Redirect href="/(auth)/welcome" />; // Block unauthorized access
-    // }
+    if (!session) {
+        return <Redirect href="/(auth)/welcome" />; // Block unauthorized access
+    }
     return (
         <Tabs screenOptions={{
             tabBarActiveTintColor: '#3B82F6',
